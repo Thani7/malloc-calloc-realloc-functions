@@ -1,0 +1,28 @@
+#include<stdlib.h>
+#include<stdio.h>
+int main()
+{
+  int i,n,*ptr;
+int sum=0;
+printf("enter the number of elements\n");
+scanf("%d",&n);
+printf("allocating memory dynamically for %d integers\n");
+ptr=(int*)calloc(n,size of integer);
+if(ptr==NULL)
+{
+printf("memory allocation failed\n");
+exit(1);
+}
+else
+  printf("memory allocation for %d integers is successful\n");
+printf("enter the elements\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",ptr+i);
+sum=sum+(*ptr+i);
+}
+printf("sum of %d\n",sum);
+free(ptr);
+return 0;
+}
+    
