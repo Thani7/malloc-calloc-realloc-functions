@@ -1,0 +1,54 @@
+#include<stdlib.h>
+#include<stdio.h>
+int main()
+{
+  int*ptr;
+  int i,initial size,newsize;
+  printf("enter initial size\n");
+  scanf("%d,&initial size);
+ptr=(int*)malloc(initial size*size of int);
+if(ptr==NULL)
+{
+printf("memory allocation failed\n");
+exit(1);
+}
+printf("memory allocated sucessfully\n);
+  printf("memory allocation done in following adresses\n");
+  for(i=0;i<initial size;i++)
+    {
+    printf("%u\n",ptr+i);
+    printf("enter the elements\n");
+    }
+  for(i=0;i<initial size;i++)
+    {
+    scanf("%d",&ptr+i);
+    }
+  printf("extending the memory by using realloc()\n");
+  printf("enter new size\n");
+  scanf("%d",&newsize);
+  ptr=realloc(ptr,newsize);
+  if(ptr==NULL)
+    {
+    printf("memory allocaion failed\n");
+    exit(1);
+    }
+  printf("memory reallocaton done successfully\n");
+  printf("The reallocated addreses are\n");
+  for(i=0;i<newsize;i++)
+    {
+    printf("%u\n",ptr+i);
+    printf("enter the new elements\n");
+    }
+    for(i=initialsize;i<new size;i++)
+      {
+      scanf("%d",ptr+i);
+      }
+  printf("all the values after reallocation are\n");
+  for(i=0;i<new size;i++)
+    {
+    printf("%d\n",*(ptr+i));
+    }
+    free(ptr);
+    return 0;
+  }
+      
